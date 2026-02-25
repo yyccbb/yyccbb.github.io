@@ -9,12 +9,14 @@ export default defineConfig({
     hostname: 'https://yyccbb.github.io'
   },
   head: [
+    ['meta', { name: 'google-site-verification', content: '9jqfcZ4SJJ2MPAdGZ5EiYCwcNGOTQA3pUgEJvinzMEc'}],
     ['meta', { name: 'keywords', content: 'NUS, SoC Compute Cluster, thread limit, process limit, remote development, VS Code, SFTP, debugpy' }],
     ['meta', { name: 'author', content: 'Yu Chenbo' }],
     ['meta', { name: 'robots', content: 'index, follow' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'Remote Development Guide - NUS SoC Compute Cluster' }],
     ['meta', { property: 'og:description', content: 'How to use VS Code SFTP and debugpy for remote debugging while respecting SoC Compute Cluster resource constraints.' }]
+
   ],
   themeConfig: {
     nav: [
