@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Remote Development Guide",
   description: "A guide for VS Code SFTP and Remote Debugging",
+  base: '/',
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
