@@ -11,18 +11,38 @@ Open Command Palette using **Ctrl/Cmd + Shift + P**. Run: **SFTP: Config**. This
 ### Step 3 — Configure sftp.json
 Include the following configuration in your `.vscode/sftp.json`:
 
+#### Basic Configuration
 ```json
 {
-  "name": "xlogin_LLMTSCS",
+  "name": "<connection_name>",
   "host": "xlogin.comp.nus.edu.sg",
   "protocol": "sftp",
   "port": 22,
-  "username": "yuchenbo",
-  "remotePath": "/home/y/yuchenbo/Projects/LLMTSCS",
+  "username": "<your_username>",
+  "password": "<your_password>",
+  "remotePath": "<remote_project_root>",
+  "uploadOnSave": true,
+  "ignore": [
+    ".vscode",
+    ".git",
+    ".DS_Store"
+  ]
+}
+```
+
+#### Advanced Configuration
+```json
+{
+  "name": "<connection_name>",
+  "host": "xlogin.comp.nus.edu.sg",
+  "protocol": "sftp",
+  "port": 22,
+  "username": "<your_username>",
+  "remotePath": "<remote_project_root>",
   "uploadOnSave": true,
   "useTempFile": true,
   "openSsh": true,
-  "privateKeyPath": "/Users/yyccbb/.ssh/id_ed25519",
+  "privateKeyPath": "<your_private_key_path>",
   "downloadOnOpen": true,
   "concurrency": 4,
   "watcher": {
@@ -41,12 +61,9 @@ Include the following configuration in your `.vscode/sftp.json`:
 ### Step 4 — Connect
 Run **SFTP: List** from the Command Palette to verify the connection.
 
-### Step 5 — Workflow
-Edit locally → Save → Auto upload → Run remotely.
-
-### Step 6 — Sync Options
+### Step 5 — Sync Options
 - **Upload:** Use **SFTP: Upload Active File**.
 - **Download:** Use **SFTP: Download Active File**.
 
-### Step 7 — Recommended Initial Sync
+### Step 6 — Recommended Initial Sync
 Run **SFTP: Sync Local -> Remote** to ensure all files are synchronized.
