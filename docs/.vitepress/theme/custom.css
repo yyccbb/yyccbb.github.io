@@ -1,0 +1,23 @@
+/* Frame images automatically */
+.vp-doc img {
+  border-radius: 8px;
+  border: 1px solid var(--vp-c-divider);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: var(--vp-c-bg-soft);
+  padding: 4px;
+  margin: 1.5rem 0;
+  display: block;
+  max-width: 100%;
+}
+
+/* Dark mode specific adjustments if needed */
+.dark .vp-doc img {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border-color: var(--vp-c-gutter);
+}
+
+/* Center images if needed */
+.vp-doc p > img {
+  margin-left: auto;
+  margin-right: auto;
+}
